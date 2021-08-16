@@ -11,7 +11,8 @@ public class SnakeLadder {
 			}
 			else if (option==2) {
 				System.out.println("Ladder, moving ahead by the position received on die");
-				position+=die;
+				if ((position+die)<=100)
+					position+=die;
 			}
 			else {
 				System.out.println("Snake, moving behind by the position received on die");
@@ -20,6 +21,6 @@ public class SnakeLadder {
 					position=0;
 			}
 		}
-		System.out.println("winning position is reached"+ position);
+		System.out.println("winning position is reached "+ position);
 	}	
 }
